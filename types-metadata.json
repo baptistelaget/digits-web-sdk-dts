@@ -1,0 +1,16 @@
+{
+  "authors": "Antoine Beauvais-Lacasse <https://github.com/beaulac>",
+  "definitionFilename": "index.d.ts",
+  "libraryDependencies": [],
+  "moduleDependencies": [],
+  "libraryName": "digits-web-sdk",
+  "typingsPackageName": "digits-web-sdk",
+  "sourceRepoURL": "https://github.com/octhuber/digits-web-sdk-dts",
+  "kind": "Global",
+  "globals": [
+    "Digits"
+  ],
+  "files": [
+    "index.d.ts"
+  ]
+}
