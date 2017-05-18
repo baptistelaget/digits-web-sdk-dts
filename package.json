@@ -1,0 +1,16 @@
+{
+  "name": "@types/digits-web-sdk",
+  "version": "1.0.0",
+  "description": "Typescript type declarations for the Digits Web SDK.",
+  "types": "./types/digits-web-sdk/index.d.ts",
+  "author": "Antoine Beauvais-Lacasse <abeaulac@octhuber.com>",
+  "license": "ISC",
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check ./types/digits-web-sdk/index.d.ts"
+  },
+  "devDependencies": {
+    "dtslint": "0.1.1",
+    "tslint": ">5.0.0",
+    "typescript": "2.3.2"
+  }
+}
