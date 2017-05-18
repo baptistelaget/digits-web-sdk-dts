@@ -12,6 +12,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "files": [
-    "types/digits-web-sdk/index.d.ts"
+    "index.d.ts"
   ]
 }
