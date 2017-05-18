@@ -2,19 +2,6 @@
 // Project: https://docs.fabric.io/web/digits/installation.html | https://cdn.digits.com/1/sdk.js
 // Definitions by: OctHuber Inc. / Antoine Beauvais-Lacasse <abeaulac@octhuber.com>
 
-import DigitsInitOptions = Digits.DigitsInitOptions;
-import ZeptoPromise = Digits.ZeptoPromise;
-import DigitsResponse = Digits.DigitsResponse;
-import DigitsEmbedOptions = Digits.DigitsEmbedOptions;
-
-interface Digits {
-    init(options: DigitsInitOptions): void;
-    isInitialized(): boolean;
-    getLoginStatus(): ZeptoPromise<DigitsResponse>;
-    logIn(): ZeptoPromise<DigitsResponse>;
-    embed(options: DigitsEmbedOptions): ZeptoPromise<DigitsResponse>;
-}
-
 declare namespace Digits {
     /**
      * The Digits web SDK uses the Zepto library, specifically zepto-deferred module:
@@ -60,4 +47,10 @@ declare namespace Digits {
         status: string;
         oauth_echo_headers: DigitsOAuthEchoHeaders;
     }
+
+    function init(options: DigitsInitOptions): void;
+    function isInitialized(): boolean;
+    function getLoginStatus(): ZeptoPromise<DigitsResponse>;
+    function logIn(): ZeptoPromise<DigitsResponse>;
+    function embed(options: DigitsEmbedOptions): ZeptoPromise<DigitsResponse>;
 }

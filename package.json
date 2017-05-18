@@ -1,8 +1,9 @@
 {
   "name": "@types/digits-web-sdk",
   "version": "1.0.0",
-  "description": "Typescript type declarations for the Digits Web SDK.",
+  "description": "TypeScript definitions  for the Digits Web SDK v1(?).",
   "main": "",
+  "typings": "index.d.ts",
   "author": "Antoine Beauvais-Lacasse <abeaulac@octhuber.com>",
   "license": "ISC",
   "scripts": {
