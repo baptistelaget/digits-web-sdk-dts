@@ -30,27 +30,34 @@ interface ZeptoPromise<T> extends PromiseLike<T> {
 }
 
 export interface DigitsInitOptions {
-    readonly consumerKey: string;
+    consumerKey: string;
 }
 
 export interface DigitsEmbedOptions {
-    readonly container: string;
+    container: string;
 }
 
-export interface DigitsResponse {
+export interface DigitsStatusResponse {
     readonly status: string;
-    readonly oauth_echo_headers: DigitsOAuthEchoHeaders;
+    readonly oauth_echo_headers?: DigitsStatusOAuthEchoHeaders;
+}
+export interface DigitsStatusOAuthEchoHeaders {
+    readonly oauth_echo_header?: string;
+    readonly oauth_echo_service?: string;
 }
 
-export interface DigitsOAuthEchoHeaders {
-    readonly oauth_echo_header: string;
-    readonly oauth_echo_service: string;
+export interface DigitsLoginResponse {
+    readonly oauth_echo_headers: DigitsLoginOAuthEchoHeaders;
+}
+export interface DigitsLoginOAuthEchoHeaders {
+    readonly 'X-Auth-Service-Provider': string;
+    readonly 'X-Verify-Credentials-Authorization': string;
 }
 
 export interface DigitsStatic {
     init(options: DigitsInitOptions): void;
     isInitialized(): boolean;
-    getLoginStatus(): ZeptoPromise<DigitsResponse>;
-    logIn(): ZeptoPromise<DigitsResponse>;
-    embed(options: DigitsEmbedOptions): ZeptoPromise<DigitsResponse>;
+    getLoginStatus(): ZeptoPromise<DigitsStatusResponse>;
+    logIn(): ZeptoPromise<DigitsLoginResponse>;
+    embed(options: DigitsEmbedOptions): ZeptoPromise<DigitsLoginResponse>;
 }
