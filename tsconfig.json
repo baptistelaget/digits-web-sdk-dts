@@ -2,16 +2,18 @@
   "compilerOptions": {
     "module": "commonjs",
     "lib": [
-      "es6"
+      "es6",
+      "dom"
     ],
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": false,
-    "types": [],
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
   "files": [
-    "index.d.ts"
+    "index.d.ts",
+    "zepto-deferred/index.d.ts",
+    "zepto/index.d.ts"
   ]
 }

@@ -5,12 +5,12 @@
   "main": "",
   "typings": "index.d.ts",
   "author": "Antoine Beauvais-Lacasse <abeaulac@octhuber.com>",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "lint": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check ./index.d.ts"
   },
   "devDependencies": {
-    "dtslint": "0.1.1",
+    "dtslint": "Microsoft/dtslint#production",
     "tslint": ">5.0.0",
     "typescript": "2.3.2"
   }
